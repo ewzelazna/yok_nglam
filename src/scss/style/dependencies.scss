@@ -1,0 +1,97 @@
+//Adding fonts to project
+
+@font-face {
+    font-family: 'ChunkFive';
+    src: url("../fonts/chunkfive/ChunkFive-Roman.woff") format("woff"), 
+    	 url("../fonts/chunkfive/ChunkFive-Roman.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("../fonts/lato/Lato-Regular.woff") format("woff"), 
+    	 url("../fonts/lato/Lato-Regular.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/montserrat/Montserrat-Regular.woff") format("woff"), 
+    	 url("../fonts/montserrat/Montserrat-Regular.ttf")  format("truetype");
+}
+
+// Variables
+
+	//Colors
+$primary-color: #fff;
+$second-color: #000;
+$header-color-primary: #01a2a6;
+$header-color-secondary: #29d9c2;
+$background-form-color: #ffffa6;
+
+	// Font weights
+$regular: 400;
+$bold: 600;
+
+	// Base Font
+$base-font-family: "Lato";
+$base-font-size: 16px;
+
+// 	// Headings Font
+$heading-font-family: "ChunkFive";
+$main-header-font-size: 48px;
+
+	//Logo Font
+$logo-font-family: "Montserrat";
+$logo-font-size: 26px;
+
+// Mixin
+
+	//adding prefixes
+@mixin border_radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+	//triangle arrow
+@mixin arrow_triangle($direction, $size_rl, $size, $color) {
+    width: 0;
+    height: 0;
+    @if $direction == 'up' {
+        border-left:  $size_rl solid transparent;
+        border-right:  $size_rl solid transparent;
+        border-bottom: $size solid $color;
+    }
+    @else if $direction == 'down' {
+        border-left:  $size_rl solid transparent;
+        border-right:  $size_rl solid transparent;
+        border-top: $size solid $color;
+    }
+}
+
+// Extend/Inheritance
+section {
+	max-width: 1200px;
+}
+
+.auto_margin {
+	display: block;
+	margin: 0 auto;
+}
+
+.clearfix {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.boxsizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.boxshadow {
+	-webkit-box-shadow: 7px 7px 20px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 7px 20px -5px rgba(0,0,0,0.75);
+	box-shadow: 7px 7px 20px -5px rgba(0,0,0,0.75);
+}

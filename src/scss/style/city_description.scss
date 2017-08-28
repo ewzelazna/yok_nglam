@@ -1,0 +1,45 @@
+.city_description {
+	@extend .auto_margin;
+	&:after {
+	 @extend .clearfix;
+	}
+
+	.transparent_box {
+		max-width: 1200px;
+    	height: 44px;
+    	background-color: $primary-color;
+    	margin-top: -44px;
+    	opacity: .75;
+	}
+
+	.city_description_image,
+	.city_description_text {
+		float: left;
+		width: 50%;
+	}
+
+	.city_description_image img {
+		@extend .auto_margin;
+		padding-top: 75px;
+	}
+
+	.city_description_text {
+		padding-top: 105px;
+		padding-bottom: 105px;
+		h2 {
+			font-family: $heading-font-family;
+			font-size: $main-header-font-size;
+			color: $header-color-secondary;
+			span {
+				color: $header-color-primary;
+			}
+		}
+		p {
+			font-family: $base-font-family;
+			font-size: $base-font-size;
+			line-height: 2;
+		}
+
+	}
+}
+
